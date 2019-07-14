@@ -20,7 +20,7 @@ namespace WinFormsMVC.controllers
     [Route(Route = "path/to/controler")] //or [Route("path/to/controler")]
     class UserController : Controller
     {
-        //Action a method ends "Action" can receive many argoments of ActionParameter type
+        //Action a method ends "Action" can receive many arguments of ActionParameter type
         //calling the action  Router.Run("path/to/controler/index");
         public void IndexAction() // action 
         {
@@ -28,7 +28,7 @@ namespace WinFormsMVC.controllers
         }
 
         //classes ObjectParameters1 and ObjectParameters2 extended from ActionParameter class
-        //calling the action  AnyType obj = Router.Run("path/to/controler/create", ObjectParameters1, ObjectParameters2, ...);
+        //calling the action  AnyType obj = Router.Run("path/to/controler/create", parameters1, parameters2, ...);
         public AnyType CreateAction(ObjectParameters1 parameters1, ObjectParameters2 parameters2, ...)
         {
             return AnyType;
@@ -57,10 +57,10 @@ private void Update_Click(object sender, EventArgs e)
 
 ```csharp
 // injecting data into a view (Windows Form) - Property Injection
-public void EditAction(ProductIdParameter parameter)
+public void UpdateAction(ProductParameters parameter)
 {
     ProductForm form = new ProductForm();
-    form.productParameters = new ProductDataParameters();
+    form.productParameters = parameter;
     form.Show();
 }
 ```csharp
