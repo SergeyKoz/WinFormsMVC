@@ -1,0 +1,8 @@
+packages
+TestResults
+.vs
+.idea
+WinFormsMVC/bin
+WinFormsMVC/obj
+WinformsMVC.Tests/bin
+WinformsMVC.Tests/obj
