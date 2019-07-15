@@ -30,6 +30,11 @@ namespace WinFormsMVC.models
             return products.Find(p => p.Id == id);
         }
 
+        public Product GetProduct(string article)
+        {
+            return products.Find(p => p.Article == article);
+        }
+
         public void RemoveProduct(int id)
         {
             products.RemoveAll(p => p.Id == id);

@@ -64,3 +64,5 @@ public void UpdateAction(ProductParameters parameter)
     form.Show();
 }
 ```
+
+**Model** - any data resource

@@ -20,7 +20,7 @@ namespace WinFormsMVC.Tests
         public void CreateTest()
         {
             CreateProduct();
-            Assert.IsNotNull(Products.GetInstance().products.Find(p => p.Article == "p1"));
+            Assert.IsNotNull(Products.GetInstance().GetProduct("p1"));
         }
 
         [TestMethod]
@@ -60,7 +60,7 @@ namespace WinFormsMVC.Tests
                 Price = 1.5
             };
             Router.Run("catalog/products/create", productParameters);
-            return Products.GetInstance().products.Find(p => p.Article == "p1");
+            return Products.GetInstance().GetProduct("p1");
         }
     }
 }
